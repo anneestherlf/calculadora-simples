@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Simples</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+
+    <input type="number" name="n1" id="n1">
+    <input type="number" name="n2" id="n2">
+    <div id="re">
+        O resultado deve aparecer aqui:
+    </div>
+    <div class="button-line">
+        <input class="button" type="button" value="soma" onclick="somar()">
+        <input class="button" type="button" value="subtração" onclick="subtrair()">
+        <input class="button" type="button" value="divisão" onclick="dividir()">
+        <input class="button" type="button" value="multiplicação" onclick="multiplicar()">
+    </div>
+
+    <script>
+        function somar() {
+            var a1 = window.document.getElementById('n1')
+            var a2 = window.document.getElementById('n2')
+            var r = window.document.getElementById('re')
+            var b1 = Number(a1.value)
+            var b2 = Number(a2.value)
+            var s = b1 + b2
+            re.innerHTML = `A soma entre ${b1} e ${b2} é ${s}`
+        }
+
+        function subtrair() {
+            var a1 = window.document.getElementById('n1')
+            var a2 = window.document.getElementById('n2')
+            var r = window.document.getElementById('re')
+            var b1 = Number(a1.value)
+            var b2 = Number(a2.value)
+            var s = b1 - b2
+            re.innerHTML = `A subtração entre ${b1} e ${b2} é ${s}`
+        }
+
+        function dividir() {
+            var a1 = window.document.getElementById('n1')
+            var a2 = window.document.getElementById('n2')
+            var r = window.document.getElementById('re')
+            var b1 = Number(a1.value)
+            var b2 = Number(a2.value)
+            var s = b1 / b2
+            re.innerHTML = `A divisão entre ${b1} e ${b2} é ${s}`
+        }
+
+        function multiplicar() {
+            var a1 = window.document.getElementById('n1')
+            var a2 = window.document.getElementById('n2')
+            var r = window.document.getElementById('re')
+            var b1 = Number(a1.value)
+            var b2 = Number(a2.value)
+            var s = b1 * b2
+            re.innerHTML = `A multiplicação entre ${b1} e ${b2} é ${s}`
+        }
+
+    </script>
+</body>
+
+</html>
